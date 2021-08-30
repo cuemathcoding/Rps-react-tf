@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors </title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+    <script src="dist/bundle.js"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');    
+body{
+    font-family: 'Quicksand', sans-serif !important;
+    }
+.button-large {
+  font-size: 1.8rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  padding: 0 20rem;
+}
+
+.flip {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -60px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  padding-top: 10px;
+  height: 50px; 
+}
+.site-footer {
+  background: #efefef;
+  text-align: center;
+}
+.draw{
+    color:#FEC260 !important; 
+    border-color: #FEC260 !important;
+}
+</style>
+<body>
+    <div class="page-wrap">
+        <div class="container">
+            <div class="row" style="display: inline-block; padding-top: 50px">
+                <h3 class="title" style="text-align: center">Rock Paper Scissor by CueAI</h3>
+                <h5 class="title" style="text-align: center">Press and hold the buttons(Like you did in Teachable Machine) to teach gestures.</h4>
+            </div>
+            <div class="row">
+                <div class="column clearfix">
+                    <div class="float-right">
+                        <video id="cam-video" autoplay=""></video>
+                    </div>
+                </div>
+                <div class="column" style="padding-top: 50px">
+                    <div>
+                        <button id="train-rock-button" class="button button-outline draw">Train Rock &nbsp&nbsp&nbsp&nbsp&nbsp</button>
+                        <span id="train-rock-span">No examples added</span>
+                    </div>
+                    <div>
+                        <button id="train-paper-button" class="button button-outline draw">Train Paper&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+                        <span id="train-paper-span"> No examples added</span>
+                    </div>
+                    <div class="">
+                        <button id="train-scissors-button" class="button button-outline draw">Train Scissors</button>
+                        <span id="train-scissors-span"> No examples added</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="display: flex; justify-content: center; padding-top: 15px;">
+                <button class="button-large button-outline draw" id="start-game-button" disabled>Start a game</button>
+            </div>
+            <div class="row" style="display: flex; justify-content: center;">
+                <span id="game-status">Train your gestures above then start a game!</span>
+            </div>
+            <div class="row">
+                <div class="column clearfix">
+                    <img id="rock-you" src="images/rock.png" class="flip float-right" hidden>
+                    <img id="paper-you" src="images/paper.png" class="float-right" hidden>
+                    <img id="scissors-you" src="images/scissors.png" class="float-right" hidden>
+                    <img id="you" class="float-right" hidden>
+                </div>
+                <div class="column">
+                    <img id="rock-cpu" src="images/rock.png" hidden>
+                    <img id="paper-cpu" src="images/paper.png" class="flip" hidden>
+                    <img id="scissors-cpu" src="images/scissors.png" class="flip" hidden>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</body>
+</html>
