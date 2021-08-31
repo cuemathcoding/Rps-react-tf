@@ -11,7 +11,5 @@ To run offline -
 
 For Netlify deploy
 1) Push the site to a git repo
-2) 
-3)Link site with a netlify site
-
-4)Use build commands "yarn && mkdirp dist && browserify main.js -o dist/bundle.js" to build commands
+2)Link site with a netlify site
+3)Use build commands "yarn && mkdirp dist && browserify main.js -o dist/bundle.js" to build commands
