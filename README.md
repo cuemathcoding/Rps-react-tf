@@ -15,3 +15,5 @@ For Netlify deploy
 2)Link site with a netlify site
 
 3)Use build commands "yarn && mkdirp dist && browserify main.js -o dist/bundle.js" to build commands
+
+4)Remove dist/ from publish library
